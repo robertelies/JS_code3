@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() { 
+			$("#button1").click(function(){
+				$("#mybody").css("background-color", "red");
+				$("#printButton1").text("You did a mouseclick");
+ 			});
+			$("#button2").hover(function(){
+				$("#mybody").css("background-color", "blue");
+				$("#printButton2").text("You did a mousehover");
+ 			});
+			$("#button3").mousedown(function(){
+				$("#mybody").css("background-color", "purple");
+				$("#printButton3").text("You did a mouse down");
+ 			});
+			$("#button4").mouseup(function(){
+				$("#mybody").css("background-color", "maroon");
+				$("#printButton4").text("You did a mouse up");
+ 			});
+			$("#button5").dblclick(function(){
+				$("#mybody").css("background-color", "green");
+				$("#printButton5").text("You did a double-click");
+ 			});
+			$("#button6").click(function(){
+				$("#div").fadeIn();
+ 			});
+			$("#button7").click(function(){
+				$("#div").fadeOut();
+ 			});
+			$("#button8").click(function(){
+				$("#div").fadeToggle(3000);
+ 			});
+		});
+	</script>
+</head>
+<body id = "mybody">
+<button id = "button1">CLICK ME</button>
+<p id="printButton1"></p>
+<button id = "button2">HOVER ME</button>
+<p id="printButton2"></p>
+<button id = "button3">MOUSE DOWN</button>
+<p id="printButton3"></p>
+<button id = "button4">MOUSE UP</button>
+<p id="printButton4"></p>
+<button id = "button5">DOUBLE CLICK</button>
+<p id="printButton5"></p>
+<button id = "button6">SHOW IMAGE</button>
+<button id = "button7"">HIDE IMAGE</button>
+<button id = "button8">SHOW AND HIDE</button>
+<img src="image.png" id="div" width="304" height="228" display="none">
+</body>
+</html>
